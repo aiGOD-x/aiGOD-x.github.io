@@ -9,7 +9,7 @@ var canvas;
 var points = [];
 var colors = [];
 
-var numTimesToSubdivide = 5;
+var numTimesToSubdivide = 2;
 
 window.onload = function init() {
 	var	lab2_b=document.getElementById('lab2_b');
