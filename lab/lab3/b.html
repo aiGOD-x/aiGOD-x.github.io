@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab3-b</title>
+	<script type="text/javascript">
+		
+		var i=0;
+		var r=120;
+		var t=0;
+		var num=1;
+		
+		function init(id){
+			var	button01=document.getElementById('motionless');
+			var	button02=document.getElementById('motion');
+			var	button03=document.getElementById('speed');
+			var	button04=document.getElementById('change');
+			
+			var canvas = document.getElementById(id);
+			var context = canvas.getContext('2d');
+			var context02 = canvas.getContext('2d');
+			
+			function animate() {
+				window.requestAnimationFrame(animate);
+				draw();
+			}
+			
+			function draw() {
+				// draw circle
+				var dig=Math.PI/120;
+				var x = num*Math.sin(i*dig)*r+200;
+				var y = num*Math.cos(i*dig)*r+200;
+				
+				context.fillStyle ='rgb(0,0,0)';
+				context.beginPath();
+				context.arc(x, y, 11, 0, Math.PI*2, true);
+				context.closePath();
+				context.fill();
+				i++;
+				
+				// draw line
+				if(t>=100&&t<=360){
+					//圆内为白
+					context.fillStyle = "white";
+					context.fillRect(t,t,20,10);
+					context.fillRect(400-t,400-t,20,10);
+					context.fillRect(t,400-t,20,10);
+					context.fillRect(400-t,t,20,10);
+				}else{
+					//圆外为黑
+					context.fillStyle = "black";
+					context.fillRect(t,t,20,10);
+					context.fillRect(400-t,400-t,20,10);
+					context.fillRect(t,400-t,20,10);
+					context.fillRect(400-t,t,20,10);
+					t++;
+				}
+				
+				if (i>240||t==500) {
+					i=0;
+					t=0;
+					if (r<=120) {
+						context.clearRect(0,0,canvas.width,canvas.height);
+						r=120;
+					}
+				}
+			}
+			
+			animate();
+			
+			button01.onclick=function(){
+				num = -1;
+				//animate();
+			}
+			button02.onclick=function(){
+				num = 1;
+				//animate();
+			}
+			button03.onclick=function(){
+				animate();
+			}
+		}
+	
+</script>
+</head>
+<body onload="init('myCanvas')">
+	
+	<h4>请选择：</h4>
+	<a href="a.html"><input type="button" id="laba" value="lab-a"/></a>
+	<a href="b.html"><input type="button" id="labb" value="lab-b"/></a>
+	<a href="../../index.html"><input type="button" id="main" value="返回首页"/></a>
+	
+	<h4>Lab3-b:简化版lab0</h4>
+	<canvas id="myCanvas" width="400" height="400" style="border:3px double #996633;"></canvas>
+	<img src="../img/p1.png" width="400" height="400"/><br />
+	
+	<table>
+		<tr align="center">
+			<td width="400">Lab0简化版</td>
+			<td width="400">Lab0原图</td>
+		</tr>
+	</table><br />
+	
+	<table>
+		<tr align="center">
+			<td width="133"><input type="button" id="motionless" value="顺时针转动"/></td>
+			<td width="133"><input type="button" id="motion" value="逆时针转动"/></td>
+			<td width="133"><input type="button" id="speed" value="加速"/></td>
+		</tr>
+	</table>
+
+</body>
+</html>
