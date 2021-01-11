@@ -1,3 +1,4 @@
+"use strict";
 var canvas;
 var gl;
 var program;
@@ -21,13 +22,13 @@ var vertices = [
     vec4( 0.5, -0.5, -0.5, 1.0 )
 ];
 
-//¿ØÖÆ²¿·Ö¶¨Òå±íÊ¾
+//æ§åˆ¶éƒ¨åˆ†å®šä¹‰è¡¨ç¤º
 var torsoId = 0;
 var headId  = 1;
 var head1Id = 1;
 var head2Id = 10;
-var leftUpperArmId = 2;//ÕûÌå
-var leftLowerArmId = 3;//Öâ²¿
+var leftUpperArmId = 2;//æ•´ä½“
+var leftLowerArmId = 3;//è‚˜éƒ¨
 var rightUpperArmId = 4;
 var rightLowerArmId = 5;
 var leftUpperLegId = 6;
@@ -161,7 +162,7 @@ function initNodes(Id) {
     }
 
 }
-//Ä£ĞÍ½øĞĞĞı×ªµÄ¶¨µãºóµ÷ÓÃ
+//æ¨¡å‹è¿›è¡Œæ—‹è½¬çš„å®šç‚¹åè°ƒç”¨
 function traverse(Id) {
    
    if(Id == null) return; 
@@ -172,7 +173,7 @@ function traverse(Id) {
     modelViewMatrix = stack.pop();
    if(figure[Id].sibling != null) traverse(figure[Id].sibling); 
 }
-//»æÖÆÉíÌå¸÷²¿·Ö
+//ç»˜åˆ¶èº«ä½“å„éƒ¨åˆ†
 function torso() {
 
     instanceMatrix = mult(modelViewMatrix, translate(0.0, 0.5*torsoHeight, 0.0) );
@@ -271,7 +272,7 @@ function cube()
     quad( 5, 4, 0, 1 );
 }
 
-//³¤¿í¸ß
+//é•¿å®½é«˜
 function scale4(a, b, c) {
    var result = mat4();
    result[0][0] = a;
@@ -291,7 +292,7 @@ window.onload = function init() {
     gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
     
     //
-    // ×ÅÉ«Æ÷³õÊ¼»¯
+    // ç€è‰²å™¨åˆå§‹åŒ–
     //
     program = initShaders( gl, "vertex-shader", "fragment-shader");
     
@@ -318,7 +319,7 @@ window.onload = function init() {
     var vPosition = gl.getAttribLocation( program, "vPosition" );
     gl.vertexAttribPointer( vPosition, 4, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vPosition );
-    //½»»¥´úÂë
+    //äº¤äº’ä»£ç 
     document.getElementById("slider0").onchange = function() {
         theta[torsoId ] = event.srcElement.value;
         initNodes(torsoId);
@@ -365,7 +366,7 @@ window.onload = function init() {
          theta[head2Id] = event.srcElement.value;
          initNodes(head2Id);
     };
-	//°×º×ÁÁ³á
+	//ç™½é¹¤äº®ç¿…
 	document.getElementById("move").onchange = function() {
 
          theta[torsoId] = event.srcElement.value*65;
