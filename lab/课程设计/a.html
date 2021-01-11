@@ -1,5 +1,6 @@
 <html>
-<title>�γ����</title>
+<title>课程设计</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <script id="vertex-shader" type="x-shader/x-vertex">
 
 attribute  vec4 vPosition;
@@ -30,13 +31,13 @@ void main()
 <script type="text/javascript" src="js/figure.js"></script>
 
 <body>
-<h3>��ť���ƣ�</h3>
-<h5><a href="���ֲ���PDF/չʾ����/չʾ����.html">չʾ����</a></h5>
+<h3>按钮控制：</h3>
+<h5><a href="文字材料PDF/展示报告/展示报告.html">展示报告</a></h5>
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>ת������ -180 <input id="slider0" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>�׺����� 0 <input id="move" type="range" min="0" max="1" step="1" value="0"/>1</td>
+          <td>转动身体 -180 <input id="slider0" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>白鹤亮翅 0 <input id="move" type="range" min="0" max="1" step="1" value="0"/>1</td>
 		</tr>
     </table>
 </fieldset>
@@ -44,8 +45,8 @@ void main()
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>ת��ͷ�� -180 <input id="slider10" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>̧ͷ��ͷ -180 <input id="slider1" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+          <td>转动头部 -180 <input id="slider10" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>抬头低头 -180 <input id="slider1" type="range" min="-180" max="180" step="10" value="0"/>180</td>
 		</tr>
     </table>
 </fieldset>
@@ -53,8 +54,8 @@ void main()
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>���ֱ� -180 <input id="slider2" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>������ -180 <input id="slider3" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+          <td>左手臂 -180 <input id="slider2" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>左手肘 -180 <input id="slider3" type="range" min="-180" max="180" step="10" value="0"/>180</td>
 		</tr>
     </table>
 </fieldset>
@@ -62,8 +63,8 @@ void main()
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>���ֱ� -180 <input id="slider4" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>������ -180 <input id="slider5" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+          <td>右手臂 -180 <input id="slider4" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>右手肘 -180 <input id="slider5" type="range" min="-180" max="180" step="10" value="0"/>180</td>
 		</tr>
     </table>
 </fieldset>
@@ -71,8 +72,8 @@ void main()
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>���� -180 <input id="slider6" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>����ϥ�ؽ� -180 <input id="slider7" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+          <td>左腿 -180 <input id="slider6" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>左腿膝关节 -180 <input id="slider7" type="range" min="-180" max="180" step="10" value="0"/>180</td>
 		</tr>
     </table>
 </fieldset>
@@ -80,13 +81,13 @@ void main()
 <fieldset style="width: 600px;">
     <table>
        <tr>
-          <td>���� -180 <input id="slider8" type="range" min="-180" max="180" step="10" value="0"/>180</td>
-		  <td>����ϥ�ؽ� -180 <input id="slider9" type="range"min="-180" max="180" step="10" value="0"/>180</td>
+          <td>右腿 -180 <input id="slider8" type="range" min="-180" max="180" step="10" value="0"/>180</td>
+		  <td>右腿膝关节 -180 <input id="slider9" type="range"min="-180" max="180" step="10" value="0"/>180</td>
 		</tr>
     </table>
 </fieldset>
 <br>
-<a href="../../index.html">����</a>
+<a href="../../index.html">返回</a>
 <br>
 <canvas id="gl-canvas" width="512"" height="512"your browser doesn't support the HTML5 canvas element</canvas>
 </body>
