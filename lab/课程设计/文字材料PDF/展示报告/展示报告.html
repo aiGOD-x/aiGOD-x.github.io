@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>计算机图形学--课程设计</title>
+        <meta name="description" content="关于课程各种有用的信息">
+        <meta name="author" content="Liyi">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobil-web-app-status-bar-style" content="black">
+        
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highligh">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section id="titlepage">
+                    <h1>人体模型运动模拟</h1>
+                    <H2>课程设计</H2>
+                    <p style="font-family: courier">
+                        王郝杰 石君海<br>
+                    </p>
+                    <p id="date"></p>
+                    <script>
+                        var now = new Date();
+                        var year = now.getFullYear();
+                        var month = now.getMonth();
+                        var day = now.getDate();
+                        document.getElementById( "date" ).innerHTML = year + "年" + ( 1 + month ) + "月" + day + "日";
+                    </script>
+                </section>
+
+                <section id="intro">
+                    <h2>目录</h2>
+                    <p class = "fragment">1.模型简介</p>
+                    <p class = "fragment">2.功能展示</p>
+                    <p class = "fragment">3.小组成员及分工</p>
+                </section>
+				
+                <section>
+                    <section id="textbook">
+                        <h2>1.模型简介</h2>
+                    </section>
+                    <section id="refbook">
+                        <h2>人体模型</h2>
+                        <ul>
+                            <li style="text-align:left"><small>我们小组根据自身能力选择构建此模型。通过构建大小不一的立方体拼接模拟人身体与四肢，
+							但总体来说做出的模型简单且不够逼真。我们总的设计思路是要保证模型能够 通过旋转各个立方体以实现人体四肢的大部分运动。</small></li>
+                        </ul>
+						<img src="image/04.gif" style="border:0px">
+                    </section>
+                </section>
+                <section>
+                    <section id="netresource">
+                        <h2>2.功能展示</h2>
+                    </section>
+                    <section id="prereq">
+                        <h2>本模型功能分别为：</h2>
+                        <ol>
+                            <li style="text-align:left">身体转动</li>
+                            <li style="text-align:left">头部转动</li>
+                            <li style="text-align:left">左右手臂与前臂活动</li>
+                            <li style="text-align:left">左右腿与小腿活动</li>
+                        </ol>
+                    </section>
+                    <section id="require">
+                        <h2>模型视图：</h2>
+                        <img src="image/02.png" style="border:0px">
+						<img src="image/03.jpg" style="border:0px">
+                    </section>
+					<section id="objective">
+					    <h2>模型界面展示：</h2>
+					    <img src="image/01.png" style="border:0px">
+					</section>
+                </section>
+                <section>
+                    <section id="final">
+                        <h2>3.小组成员及分工</h2>
+                    </section>
+                    <section id="exam">
+                        <h2>王郝杰</h2>
+                        <p style="text-align:left"><text style="color:darkred">实现模型旋转、展示文件制作，动作设计及制作</p>
+                        <h2>石君海</h2>
+                        <p style="text-align:left"><text style="color:darkred">实现交互、 建立模型、文档制作</p>
+                    </section>
+                </section>
+                <section id="server">
+                    <h2>视频演示</h2>
+                	<video width="602px" height="345px" controls="controls">
+                	<source src="image/1.mp4" type="video/mp4"></source>
+                </section>
+                <section id="server">
+                	<h2><a href="../../a.html">模型展示</a></h2>
+                </section>
+                <section id="thanks">
+                    <h2>谢谢倾听</h2>
+                    <img src="image/05.gif" style="border:0px">
+					<h5>借鉴老师上课文件，在此感谢老师</h5>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+               // display controls in the bottom right corner
+                controls: true,
+
+                // display a presentation progress bar
+                progress: true,
+
+                // set default timing of 2 minutes per slides
+                defaultTiming: 120,
+
+                // Display the page number of the current slides
+                slideNumber: true,
+
+                // Push each slide change to the browser history
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enable touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+
+                // Change teh presentation direction to be RTL
+                rtl: false,
+
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+
+                // Turns fragments on and off globally
+                fragment: true,
+
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Flags if we should show a help overlay when the questionmark key is pressed
+                help: true,
+
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+
+                // Global override for autoplaying embedded media( video/audio/iframe)
+                // - null: media will only autoplay if data-autopay is present
+                // - true: all media will autoplay, regradless of individual setting
+                // - false: no media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+
+                // Number of milliseconds between automatically proceeding to the next slide, 
+                //disabled when set to 0, this value can be overwritten by
+                // using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
+
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakin-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+                // Number of pixels to move the parallax background per slide
+                // - calculated automatically unless specified
+                // - set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+
+                // The display mode that will be used to show slides
+                display: 'block',
+
+                // print to pdf while no slide grows to more than one printed page
+                pdfMaxPagesPerSlide: 1,
+
+                // presentation
+                width: 900,
+                height: 900,
+
+                margin: 0.1,
+
+                minScale: 0.2,
+                maxScale: 1.5, 
+            })
+        </script>
+    </body>
+</html>
