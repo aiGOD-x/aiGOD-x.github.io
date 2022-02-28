@@ -135,27 +135,27 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
 	text-transform: uppercase;
 }
 .header {
-	background: url(../images/bg09.jpg) center no-repeat;
+	background: url(../../images/bg09.jpg) center no-repeat;
 	background-size: cover;
 }
 .header01 {
-	background: url(../images/bg01.jpg) center no-repeat;
+	background: url(../../images/bg01.jpg) center no-repeat;
 	background-size: cover;
 }
 .header02 {
-	background: url(../images/bg11.jpg) center no-repeat;
+	background: url(../../images/bg11.jpg) center no-repeat;
 	background-size: cover;
 }
 .header03 {
-	background: url(../images/11.jpg) center no-repeat;
+	background: url(../../images/11.jpg) center no-repeat;
 	background-size: cover;
 }
 .header04 {
-	background: url(../images/1.jpg) center no-repeat;
+	background: url(../../images/1.jpg) center no-repeat;
 	background-size: cover;
 }
 .header05 {
-	background: url(../images/11.jpg) center no-repeat;
+	background: url(../../images/11.jpg) center no-repeat;
 	background-size: cover;
 }
 .banner-text.text-center {
